@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import AddTechnology from './components/AddTechnology';
+import TechnologyList from './components/TechnologyList';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [technologies, setTechnologies] = useState([]);
+
+  const addTechnology = (tech) => {
+    setTechnologies([...technologies, tech]);
+  };
+
+  const editTechnology = (index, newTech) => {
+    const newTechnologies = [...technologies];
+    newTechnologies[index] = newTech;
+    setTechnologies(newTechnologies);
+  };
+
+  const removeTechnology = (index) => {
+    const newTechnologies = technologies.filter((_, i) => i !== index);
+    setTechnologies(newTechnologies);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Lista de Tecnologias para Aprender</h1>
+      <AddTechnology addTechnology={addTechnology} />
+      <TechnologyList
+        technologies={technologies}
+        editTechnology={editTechnology}
+        removeTechnology={removeTechnology}
+      />
     </div>
   );
-}
+};
 
 export default App;

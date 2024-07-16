@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Lista de Tecnologias para Aprender
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta é uma aplicação web desenvolvida com React para gerenciar uma lista de tecnologias que você deseja aprender. A aplicação permite adicionar, editar e remover tecnologias, exibindo-as de forma dinâmica na interface.
 
-## Available Scripts
+# Tema Recebido
 
-In the project directory, you can run:
+O tema desta aplicação é "Lista de Tecnologias para Aprender". O objetivo é criar uma interface onde os usuários possam adicionar novas tecnologias que desejam aprender, editar informações existentes e remover tecnologias da lista.
 
-### `npm start`
+# Instruções de Instalação e Uso
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Pré-requisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js instalado (versão 14 ou superior)
+- npm (gerenciador de pacotes do Node.js)
 
-### `npm test`
+## Passos para Instalação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório para o seu computador:
+   ```bash
+   git clone [URL_DO_REPOSITORIO]
 
-### `npm run build`
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd hello-world
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Instale as dependências do projeto:
+    ```bash
+    npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Execução da Aplicação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Inicie a aplicação
+    ```bash
+    npm start
 
-### `npm run eject`
+2. Abra o navegador e acesse
+    ```bash
+    http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Uso
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - Adicione novas tecnologias utilizando o formulário de entrada.
+ - Edite as tecnologias existentes clicando no botão "Editar" ao lado da tecnologia desejada.
+ - Remova tecnologias da lista clicando no botão "Remover" ao lado da tecnologia desejada.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ ## Descrição dos componentes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ ### App.js
+ Este é o componente principal da aplicação. Ele gerencia o estado global, incluindo a lista de tecnologias, e define as funções para adicionar, editar e remover tecnologias.
 
-## Learn More
+ ### AddTechnology.js
+ Este componente contém um formulário para adicionar novas tecnologias. Ele usa o hook "useState" para gerenciar o estado do campo de entrada.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ ### TechnologyList.js
+ Este componente exibe a lista de tecnologias. Ele recebe a lista de tecnologias e as funções de edição e remoção como props e mapeia cada tecnologia para um componente "TechnologyItem".
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ ### TechnologyItem.js
+ Este componente representa cada item da lista de tecnologias. Ele permite a edição e remoção de tecnologias. O estado de edição é gerenciado pelo hook "useState".
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ ### Estilo e Layout
+ A estilização básica da aplicação é feita utilizando CSS. O arquivo "App.css" contém estilos básicos para o layout e a apresentação dos componentes.
